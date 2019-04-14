@@ -7,14 +7,6 @@ import getMeats from './meat.js';
 import getVeggies from './veggies.js';
 import getCondiments from './condiments.js';
 
-const addToCartEvent = (e) => {
-    e.preventDefault();
-    //loop through all objects, see if they are checked, add all checked items to object, print to cart
-    // const myBread= getBread.getBread();
-    // cart.setCart(getBread);
-    // cart.cartToDom();
-    };
-
 const logThis = (e) => {
     console.log(e.target.id);
 }
@@ -33,11 +25,11 @@ const selectBread = () => {
 const selectCheese = () => {
     const myCheese = getCheese.getCheese();
     let domString1 = `<h2> Cheese:</h2>`;
-    domString1 += `<input type="checkbox" aria-label="Bread" id="american" class="item"> American </input>`
-    domString1 += `<input type="checkbox" aria-label="Bread" id="cheddar" class="item"> Cheddar </input>`
-    domString1 += `<input type="checkbox" aria-label="Bread" id="jack" class="item"> Jack </input>`
-    domString1 += `<input type="checkbox" aria-label="Bread" id="swiss" class="item"> Swiss </input>`
-    domString1 += `<input type="checkbox" aria-label="Bread" id="nocheese" class="item"> None </input>`
+    domString1 += `<input type="checkbox" id="american" class="item"> American </input>`
+    domString1 += `<input type="checkbox" id="cheddar" class="item"> Cheddar </input>`
+    domString1 += `<input type="checkbox" id="jack" class="item"> Jack </input>`
+    domString1 += `<input type="checkbox" id="swiss" class="item"> Swiss </input>`
+    domString1 += `<input type="checkbox" id="nocheese" class="item"> None </input>`
     util.printToDom('cheese-container',domString1);
 };
 
@@ -55,11 +47,11 @@ const selectMeats = () => {
 const selectVeggies = () => {
     const myVeggies = getVeggies.getVeggies();
     let domString1 = `<h2> Veggies:</h2>`;
-    domString1 += `<input type="checkbox" aria-label="Bread" id="mustard" class="item"> Lettuce </input>`
-    domString1 += `<input type="checkbox" aria-label="Bread" id="mayo" class="item"> Tomatoes </input>`
-    domString1 += `<input type="checkbox" aria-label="Bread" id="chipotle" class="item"> Pickles </input>`
-    domString1 += `<input type="checkbox" aria-label="Bread" id="ranch" class="item"> Peppers </input>`
-    domString1 += `<input type="checkbox" aria-label="Bread" id="nocond" class="item"> Onions </input>`
+    domString1 += `<input type="checkbox" id="mustard" class="item"> Lettuce </input>`
+    domString1 += `<input type="checkbox" id="mayo" class="item"> Tomatoes </input>`
+    domString1 += `<input type="checkbox" id="chipotle" class="item"> Pickles </input>`
+    domString1 += `<input type="checkbox" id="ranch" class="item"> Peppers </input>`
+    domString1 += `<input type="checkbox" id="nocond" class="item"> Onions </input>`
     util.printToDom('veggies-container',domString1);
 };
 
@@ -71,9 +63,13 @@ const selectCondiments = () => {
     domString1 += `<input type="checkbox" aria-label="Bread" id="chipotle" class="item"> Chipotle </input>`
     domString1 += `<input type="checkbox" aria-label="Bread" id="ranch" class="item"> Ranch </input>`
     domString1 += `<input type="checkbox" aria-label="Bread" id="nocond" class="item"> None </input>`
+    domString1 += `<br><button type="button" class="btn btn-success" id="addBtn">Add to Cart</button>`
     util.printToDom('condiments-container',domString1);
+
 };
 
-
+const cartListener =()=>{
+ document.getElementById('addBtn').addEventListener('click', buyEvent);
+}
 
 export default {selectBread, selectCheese, selectCondiments, selectMeats, selectVeggies};

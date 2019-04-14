@@ -10,4 +10,7 @@ const getBread = () => {
     return breadInfo;
 };
 
+const addBread = (breadType) => {
+
+}
 export default { getBread };
