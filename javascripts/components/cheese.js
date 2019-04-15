@@ -17,9 +17,6 @@ const addCheese = (event) => {
     ingredient.type = cheeseType;
     ingredient.price = cheese[cheeseType];
     print.addToCart(ingredient);
-  } else if (!checked) {
-    print.removeFromCart(cheeseType);
-  }
 };
-
+}
 export default {addCheese};

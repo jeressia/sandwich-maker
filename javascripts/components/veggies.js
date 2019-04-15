@@ -17,8 +17,6 @@ const addVeggie = (event) => {
     ingredient.type = veggieType;
     ingredient.price = veggie[veggieType];
     print.addToCart(ingredient);
-  } else if (!checked) {
-    print.removeFromCart(veggieType);
   }
 };
 

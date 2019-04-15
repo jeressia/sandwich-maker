@@ -17,9 +17,6 @@ const addCondiment = (event) => {
     ingredient.type = condimentType;
     ingredient.price = condiment[condimentType];
     print.addToCart(ingredient);
-  } else if (!checked) {
-    print.removeFromCart(condimentType);
-  }
 };
-
+}
 export default {addCondiment};
