@@ -1,4 +1,4 @@
-import util from '../helpers/util.js'
+import util from '../helpers/buttons.js'
 import getBread from '../components/bread.js'
 
 const cart =[];
@@ -9,6 +9,15 @@ const getCart= () => {
 const setCart = (bread) => {
  cart.push(bread);
 };
+
+const addToCartEvent = (e) => {
+  e.preventDefault();
+  //loop through all objects, see if they are checked, add all checked items to object, print to cart
+  // const myBread= getBread.getBread();
+  // cart.setCart(getBread);
+  // cart.cartToDom();
+  };
+
 const myBread= getBread.getBread();
 const buyEvent = (e) => {
     e.preventDefault();

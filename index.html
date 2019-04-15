@@ -1,24 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles/main.css">
-    <title>Sandwich Central</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sandwich Maker</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles/main.css">
 </head>
-<body>
+<body class="p-0">
     <h1 class="page-title">Sandwich Central</h1>
-    <div id="bread-container"></div>
-    <div id="cheese-container"></div>
-    <div id="meat-container"></div>
-    <div id="veggies-container"></div>
-    <div id="condiments-container"></div>
-    <div id="cart-container"</div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script type="module" src="./javascripts/main.js"></script>
+    <p class="subtitle">Choose your sandwich toppings below!</p>
+  <div class="container shadow-lg">
+    <div class="row">
+      <div class="col-9 border border-light">
+        <div id="bread" class="row flex-column mx-0">
+          <h1 class="food-title">Bread:</h1>
+          <div>
+            <input type="checkbox" id="italian" class="item">Italian</input>
+            <input type="checkbox" id="grain" class="item">Whole Grain</input>
+            <input type="checkbox" id="handcheese" class="item">Herbs & Cheese</input>
+            <input type="checkbox" id="flatbread" class="item">Flatbread</input>
+            <input type="checkbox" id="letwrap" class="item">Lettuce Wrap</input>
+          </div>
+        </div>
+
+    <div id="cheese" class="row flex-column mx-0">
+        <h1 class="food-title">Cheese: </h1>
+            <div>
+            <input type="checkbox" id="american" class="item">American</input>
+            <input type="checkbox" id="cheddar" class="item">Cheddar</input>
+            <input type="checkbox" id="swiss" class="item">Swiss</input>
+            <input type="checkbox" id="pjack" class="item">Pepper Jack</input>
+            <input type="checkbox" id="mozz" class="item">Mozzarella</input>
+            </div>
+    </div>
+
+    <div id="meat" class="row flex-column mx-0">
+        <h1 class="food-title">Meat:</h1>
+        <div>
+        <input type="checkbox" id="turkey" class="item">Turkey</input>
+        <input type="checkbox" id="roastbeef" class="item">Roast Beef</input>
+        <input type="checkbox" id="grchick" class="item">Grilled Chicken</input>
+        <input type="checkbox" id="meatball" class="item">Meatball</input>
+        <input type="checkbox" id="tuna" class="item">Tuna</input>
+        </div>
+    </div>
+
+    <div id="veggie" class="row flex-column mx-0">
+            <h1 class="food-title">Veggies:</h1>
+            <div>
+                <input type="checkbox" id="lettuce" class="item">Lettuce</input>
+                <input type="checkbox" id="tomato" class="item">Tomatoes</input>
+                <input type="checkbox" id="onions" class="item">Onions</input>
+                <input type="checkbox" id="spinach" class="item">Spinach</input>   
+                <input type="checkbox" id="pickles" class="item">Pickles</input>
+            </div>
+            </div>
+            
+    <div id="condiment" class="row flex-column mx-0">
+        <h1 class="food-title">Condiments:</h1>
+        <div>
+        <input type="checkbox" id="mustard" class="item">Mustard</input>
+        <input type="checkbox" id="mayonnaise" class="item">Mayonaise</input>
+        <input type="checkbox" id="ranch" class="item">Ranch</input>
+        <input type="checkbox" id="chipotle" class="item">Chipotle</input>
+        <input type="checkbox" id="hmust" class="item">Honey Mustard</input>
+        </div>
+    </div>
+  
+
+
+        <div class="mt-3">
+          <button type="button" id="checkout-button" class="btn btn-warning mb-3">Add to Cart</button>
+        </div>
+  
+      </div>
+    
+      <div class="col-3 border border-light">
+        <h1 class="page-title">Your order</h1><hr>
+        <div id="cart-container"></div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script type="module" src="./javascripts/main.js"></script>
 </body>
 </html>

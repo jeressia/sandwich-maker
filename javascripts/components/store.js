@@ -1,6 +1,6 @@
 import cart from './cart.js'
 
-import util from '../helpers/util.js'
+import util from '../helpers/buttons.js/index.js'
 import getBread from './bread.js';
 import getCheese from './cheese.js';
 import getMeats from './meat.js';
@@ -58,7 +58,7 @@ const selectVeggies = () => {
 const selectCondiments = () => {
     const myCondiments = getCondiments.getCondiments();
     let domString1 = `<h2> Condiments:</h2>`;
-    domString1 += `<input type="checkbox" aria-label="Bread" id="mustard" class="item"> Mustard </input>`
+    domString1 += `<input type="checkbox" aria-label="Bread" id="mustard" > Mustard </input>`
     domString1 += `<input type="checkbox" aria-label="Bread" id="mayo" class="item"> Mayonnaise </input>`
     domString1 += `<input type="checkbox" aria-label="Bread" id="chipotle" class="item"> Chipotle </input>`
     domString1 += `<input type="checkbox" aria-label="Bread" id="ranch" class="item"> Ranch </input>`
@@ -69,7 +69,7 @@ const selectCondiments = () => {
 };
 
 const cartListener =()=>{
- document.getElementById('addBtn').addEventListener('click', buyEvent);
+ document.getElementById('addBtn').addEventListener('click', addToCartEvent);
 }
 
 export default {selectBread, selectCheese, selectCondiments, selectMeats, selectVeggies};

@@ -1,10 +1,27 @@
 body {
-    background-color: rgb(56, 75, 49);
-    color: white;
+    /* background-image: url('../assets/bg.png');
+    background-repeat: repeat;
+    color: white; */
 }
 
+.container {
+    background-color: white;
+    color: #404040;
+}
 .page-title {
 text-align: center;
+color: #832502;
+}
+
+.subtitle {
+    text-align: center;
+    font-style: italic;
+    color: orangered;
+}
+
+.food-title {
+    font-style: italic;
+    color:#832502;
 }
 
 .item {
