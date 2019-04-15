@@ -1,13 +1,25 @@
-const meatInfo = {
-    Turkey: 0.50,
-    RoastBeef: 0.75,
-    GrilledChicken: 0.90,
-    FriedChicken: 0.40,
-    None: 0.60
-}
+import print from '../helpers/util.js'
 
-const getMeats = () => {
-    return meatInfo;
+const meats = {
+  turkey: 3.60,
+  roastbeef: 3.00,
+  grchick: 3.75,
+  meatball: 3.50,
+  tuna: 3.25
 };
 
-export default { getMeats };
+const addMeat = (event) => {
+  const checked = event.target.checked;
+  const meatType = event.target.id;
+  
+  if(checked) {
+    let ingredient = {};
+    ingredient.type = meatType;
+    ingredient.price = meat[meatType];
+    print.addToCart(ingredient);
+  } else if (!checked) {
+    print.removeFromCart(meatType);
+  }
+};
+
+export default {addMeat};

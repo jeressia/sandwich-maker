@@ -1,11 +1,7 @@
-import store from './components/store.js';
+import buttons from './helpers/buttons.js';
 
 const init = () => {
-store.selectBread();
-store.selectCheese();
-store.selectMeats();
-store.selectVeggies();
-store.selectCondiments();
-};
+  buttons.attachEvents();
+}
 
 init();
