@@ -12,27 +12,27 @@
     <h1 class="page-title">Sandwich Central</h1>
     <p class="subtitle">Choose your sandwich toppings below!</p>
   <div class="container shadow-lg">
-    <div class="row">
-      <div class="col-9 border border-light">
+    <div class="row d-flex">
+      <div class="col-9 border border-light store">
         <div id="bread" class="row flex-column mx-0">
           <h1 class="food-title">Bread:</h1>
           <div>
-            <input type="checkbox" id="italian" class="item">Italian</input>
-            <input type="checkbox" id="grain" class="item">Whole Grain</input>
-            <input type="checkbox" id="handcheese" class="item">Herbs & Cheese</input>
-            <input type="checkbox" id="flatbread" class="item">Flatbread</input>
-            <input type="checkbox" id="letwrap" class="item">Lettuce Wrap</input>
+            <input type="checkbox" id="Italian" class="item" value="Italian">Italian</input>
+            <input type="checkbox" id="Rye" class="item">Rye</input>
+            <input type="checkbox" id="Bun" class="item">Bun</input>
+            <input type="checkbox" id="Flatbread" class="item">Flatbread</input>
+            <input type="checkbox" id="Wrap" class="item">Lettuce Wrap</input>
           </div>
         </div>
 
     <div id="cheese" class="row flex-column mx-0">
         <h1 class="food-title">Cheese: </h1>
             <div>
-            <input type="checkbox" id="american" class="item">American</input>
-            <input type="checkbox" id="cheddar" class="item">Cheddar</input>
-            <input type="checkbox" id="swiss" class="item">Swiss</input>
-            <input type="checkbox" id="pjack" class="item">Pepper Jack</input>
-            <input type="checkbox" id="mozz" class="item">Mozzarella</input>
+            <input type="checkbox" id="American" class="item">American</input>
+            <input type="checkbox" id="Cheddar" class="item">Cheddar</input>
+            <input type="checkbox" id="Swiss" class="item">Swiss</input>
+            <input type="checkbox" id="Jack" class="item">Pepper Jack</input>
+            <input type="checkbox" id="Mozzarella" class="item">Mozzarella</input>
             </div>
     </div>
 
@@ -72,14 +72,14 @@
 
 
         <div class="mt-3">
-          <button type="button" id="checkout-button" class="btn btn-warning mb-3">Add to Cart</button>
+          <button type="button" id="checkout-button" class="btn btn-info mb-3">Add to Cart</button>
         </div>
   
       </div>
     
       <div class="col-3 border border-light">
         <h1 class="page-title">Your order</h1><hr>
-        <div id="cart-container"></div>
+        <div id="cart-container" class="cart"></div>
       </div>
     </div>
   </div>

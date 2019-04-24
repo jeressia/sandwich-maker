@@ -1,24 +1,31 @@
 .container {
     background-color: white;
-    color: #404040;
+    color: #585858;
 }
 .page-title {
 text-align: center;
-color: #832502;
+color: #026583;
 }
 
 .subtitle {
     text-align: center;
     font-style: italic;
-    color: orangered;
+    color: rgb(3, 205, 157);
 }
 
 .food-title {
     font-style: italic;
-    color:#832502;
+    color:#02835a;
 }
 
 .item {
     margin: 10px;
 }
 
+#total-button {
+    margin-top: 5px;
+}
+.cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;}

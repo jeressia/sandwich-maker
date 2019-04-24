@@ -1,21 +1,21 @@
 import print from '../helpers/util.js'
 
 const breads = {
-  italian: 0.65,
-  grain: 0.90,
-  handcheese: 0.60,
-  flatbread: 0.95,
-  letwrap: 0.75
+  Italian: 0.65,
+  Rye: 0.90,
+  Bun: 0.60,
+  Flatbread: 0.95,
+  Wrap: 0.75
 };
 
 const addBread = (event) => {
-  const checked = event.target.checked;
   const breadType = event.target.id;
+  const checked = event.target.checked;
   
   if(checked) {
     let ingredient = {};
     ingredient.type = breadType;
-    ingredient.price = bread[breadType];
+    ingredient.price = `$${breads[breadType]}`;
     print.addToCart(ingredient);
 };
 }

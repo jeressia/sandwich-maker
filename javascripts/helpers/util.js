@@ -14,6 +14,7 @@ const cartBuilder = (array) => {
     domString += `<div>${item.price}</div>`
     domString += `</div>`
   })
+  domString += `<button type="button" id="total-button" class="btn btn-info mb-3">Add to Cart</button>`
   printToDom('cart-container', domString);
 };
 

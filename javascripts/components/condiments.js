@@ -15,7 +15,7 @@ const addCondiment = (event) => {
   if(checked) {
     let ingredient = {};
     ingredient.type = condimentType;
-    ingredient.price = condiment[condimentType];
+    ingredient.price = `$${condiments[condimentType]}`;
     print.addToCart(ingredient);
 };
 }

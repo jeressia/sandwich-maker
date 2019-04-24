@@ -15,7 +15,7 @@ const addMeat = (event) => {
   if(checked) {
     let ingredient = {};
     ingredient.type = meatType;
-    ingredient.price = meat[meatType];
+    ingredient.price = `$${meats[meatType]}`;
     print.addToCart(ingredient);
   }
 };
